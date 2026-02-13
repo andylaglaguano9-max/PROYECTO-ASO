@@ -1,0 +1,73 @@
+# extended LDIF
+#
+# LDAPv3
+# base <dc=proyecto,dc=local> with scope subtree
+# filter: (objectclass=*)
+# requesting: ALL
+#
+
+# proyecto.local
+dn: dc=proyecto,dc=local
+objectClass: top
+objectClass: dcObject
+objectClass: organization
+o: Espe
+dc: proyecto
+
+# Usuarios, proyecto.local
+dn: ou=Usuarios,dc=proyecto,dc=local
+objectClass: organizationalUnit
+ou: Usuarios
+
+# Grupos, proyecto.local
+dn: ou=Grupos,dc=proyecto,dc=local
+objectClass: organizationalUnit
+ou: Grupos
+
+# Esteban, Usuarios, proyecto.local
+dn: cn=Esteban,ou=Usuarios,dc=proyecto,dc=local
+objectClass: inetOrgPerson
+cn: Esteban
+sn: Usuario
+uid: esteban
+
+# ventas, Grupos, proyecto.local
+dn: cn=ventas,ou=Grupos,dc=proyecto,dc=local
+objectClass: posixGroup
+cn: ventas
+gidNumber: 5000
+memberUid: esteban
+
+# lagla, Usuarios, proyecto.local
+dn: uid=lagla,ou=Usuarios,dc=proyecto,dc=local
+objectClass: inetOrgPerson
+uid: lagla
+sn: Laglaguano
+cn: Andy Laglaguano
+
+# companero, Usuarios, proyecto.local
+dn: uid=companero,ou=Usuarios,dc=proyecto,dc=local
+objectClass: inetOrgPerson
+uid: companero
+sn: Estudiante
+cn: Companero Proyecto
+
+# admins, Grupos, proyecto.local
+dn: cn=admins,ou=Grupos,dc=proyecto,dc=local
+objectClass: groupOfNames
+cn: admins
+member: uid=lagla,ou=Usuarios,dc=proyecto,dc=local
+
+# analysts, Grupos, proyecto.local
+dn: cn=analysts,ou=Grupos,dc=proyecto,dc=local
+objectClass: groupOfNames
+cn: analysts
+member: uid=companero,ou=Usuarios,dc=proyecto,dc=local
+
+# search result
+search: 2
+result: 0 Success
+
+# numResponses: 10
+# numEntries: 9
+vie 13 feb 2026 07:52:25 UTC

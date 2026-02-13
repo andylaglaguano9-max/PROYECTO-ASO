@@ -1,0 +1,11 @@
+# Rol de Administrador para Andy (lagla)
+dn: cn=admins,ou=Grupos,dc=proyecto,dc=local
+objectClass: groupOfNames
+cn: admins
+member: uid=lagla,ou=Usuarios,dc=proyecto,dc=local
+
+# Rol de Analista para tu compañero
+dn: cn=analysts,ou=Grupos,dc=proyecto,dc=local
+objectClass: groupOfNames
+cn: analysts
+member: uid=companero,ou=Usuarios,dc=proyecto,dc=local

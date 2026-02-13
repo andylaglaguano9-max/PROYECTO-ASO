@@ -1,0 +1,16 @@
+# Tu usuario para la entrega (Andy)
+dn: uid=lagla,ou=Usuarios,dc=proyecto,dc=local
+objectClass: inetOrgPerson
+uid: lagla
+sn: Laglaguano
+cn: Andy Laglaguano
+userPassword: Password123!
+
+# Usuario para tu compañero
+dn: uid=companero,ou=Usuarios,dc=proyecto,dc=local
+objectClass: inetOrgPerson
+uid: companero
+sn: Estudiante
+cn: Companero Proyecto
+userPassword: Password123!
+

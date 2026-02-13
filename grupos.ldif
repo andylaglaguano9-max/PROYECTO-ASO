@@ -1,0 +1,4 @@
+dn: cn=admins,ou=grupos,dc=empresa,dc=local
+objectClass: groupOfNames
+cn: admins
+member: uid=lagla,ou=usuarios,dc=empresa,dc=local
